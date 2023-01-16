@@ -1,6 +1,6 @@
 ﻿/*
 MIT License
-Copyright (c) 2019 
+Copyright (c) 2019
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -17,11 +17,11 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
-using ProfanityFilter.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Globalization;
+using ProfanityFilter.Interfaces;
 
 namespace ProfanityFilter
 {
@@ -64,7 +64,7 @@ namespace ProfanityFilter
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="wordToCheck"></param>
         /// <returns></returns>
@@ -92,7 +92,7 @@ namespace ProfanityFilter
 
         /// <summary>
         /// Remove all words from the allow list.
-        /// </summary>  
+        /// </summary>
         public void Clear()
         {
             _allowList.Clear();

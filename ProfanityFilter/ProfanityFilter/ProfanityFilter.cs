@@ -18,7 +18,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-using ProfanityFilter.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -26,6 +25,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using ProfanityFilter.Interfaces;
 
 namespace ProfanityFilter
 {
@@ -37,7 +37,6 @@ namespace ProfanityFilter
     /// </summary>
     public class ProfanityFilter : ProfanityBase, IProfanityFilter
     {
-
         /// <summary>
         /// Default constructor that loads up the default profanity list.
         /// </summary>
@@ -187,7 +186,6 @@ namespace ProfanityFilter
 
             // Catch whether multi-word profanities are in the allow list filtered sentence.
             AddMultiWordProfanities(swearList, ConvertWordListToSentence(postAllowList));
-
 
             StringBuilder censored = new StringBuilder(sentence);
             StringBuilder tracker = new StringBuilder(sentence);
@@ -362,6 +360,7 @@ namespace ProfanityFilter
                                 {
                                     tracker[i] = '*';
                                 }
+
                                 break;
                             }
 
@@ -439,7 +438,5 @@ namespace ProfanityFilter
 
             return censoredWord;
         }
-
-
     }
 }
